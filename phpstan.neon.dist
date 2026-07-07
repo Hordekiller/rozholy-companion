@@ -1,0 +1,25 @@
+includes:
+    - phpstan-baseline.neon
+
+parameters:
+    level: 2
+    paths:
+        - .
+    excludePaths:
+        analyseAndScan:
+            - vendor/
+            - node_modules (?)
+            - build/
+            - src/
+            - .git/
+            - '*.css'
+            - '*.js'
+            - '*.json'
+            - composer.json
+            - package.json
+            - webpack.config.js
+
+    scanFiles:
+        - .phpstan/elementor-stubs.php
+
+    ignoreErrors:

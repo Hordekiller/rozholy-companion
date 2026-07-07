@@ -1,0 +1,991 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Constant ROZHOLY_COMPANION_DIR not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: includes/admin-page.php
+
+		-
+			message: '#^Constant ROZHOLY_COMPANION_URI not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function add_action not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function add_menu_page not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function add_submenu_page not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function admin_url not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 28
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function esc_html_e not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function rest_url not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function wp_count_posts not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function wp_create_nonce not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function wp_enqueue_script not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function wp_enqueue_style not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function wp_localize_script not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/admin-page.php
+
+		-
+			message: '#^Function add_action not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/blocks.php
+
+		-
+			message: '#^Call to method set_param\(\) on an unknown class WP_REST_Request\.$#'
+			identifier: class.notFound
+			count: 5
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Constant MINUTE_IN_SECONDS not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function current_user_can not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function delete_transient not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 56
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function get_bloginfo not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function get_option not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function get_transient not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function get_user_by not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function is_wp_error not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function rozholy_companion_get_stats invoked with 1 parameter, 0 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function sanitize_key not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function sanitize_text_field not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function sanitize_textarea_field not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function set_transient not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function wp_generate_password not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function wp_insert_post not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function wp_insert_user not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function wp_mail not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function wp_rand not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function wp_register_ability not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function wp_register_ability_category not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Function wp_set_auth_cookie not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Instantiated class WP_Error not found\.$#'
+			identifier: class.notFound
+			count: 17
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Instantiated class WP_REST_Request not found\.$#'
+			identifier: class.notFound
+			count: 5
+			path: includes/class-abilities-registrar.php
+
+		-
+			message: '#^Constant ROZHOLY_COMPANION_DIR not found\.$#'
+			identifier: constant.notFound
+			count: 1
+			path: includes/elementor/init.php
+
+		-
+			message: '#^Function add_action not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/elementor/init.php
+
+		-
+			message: '#^Function did_action not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/init.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/init.php
+
+		-
+			message: '#^Function __ not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function admin_url not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function esc_attr not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function esc_attr_e not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function esc_html not found\.$#'
+			identifier: function.notFound
+			count: 14
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 58
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function esc_html_e not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function esc_js not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function esc_url not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function rest_url not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function wp_create_nonce not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function wp_nonce_field not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-booking.php
+
+		-
+			message: '#^Function date_i18n not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-extras.php
+
+		-
+			message: '#^Function esc_attr not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: includes/elementor/widgets/widget-extras.php
+
+		-
+			message: '#^Function esc_html not found\.$#'
+			identifier: function.notFound
+			count: 16
+			path: includes/elementor/widgets/widget-extras.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 65
+			path: includes/elementor/widgets/widget-extras.php
+
+		-
+			message: '#^Function esc_url not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: includes/elementor/widgets/widget-extras.php
+
+		-
+			message: '#^Function get_option not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-extras.php
+
+		-
+			message: '#^Function wp_kses_post not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-extras.php
+
+		-
+			message: '#^Function wpautop not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-extras.php
+
+		-
+			message: '#^Call to an undefined static method Elementor\\Group_Control_Background\:\:get_type\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 2
+			path: includes/elementor/widgets/widget-hero.php
+
+		-
+			message: '#^Function esc_attr not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: includes/elementor/widgets/widget-hero.php
+
+		-
+			message: '#^Function esc_html not found\.$#'
+			identifier: function.notFound
+			count: 12
+			path: includes/elementor/widgets/widget-hero.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 57
+			path: includes/elementor/widgets/widget-hero.php
+
+		-
+			message: '#^Function esc_url not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: includes/elementor/widgets/widget-hero.php
+
+		-
+			message: '#^Function wp_kses_post not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-hero.php
+
+		-
+			message: '#^Call to an undefined method Rozholy_Widget_Gallery_Grid\:\:get_id\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-media.php
+
+		-
+			message: '#^Function esc_attr not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: includes/elementor/widgets/widget-media.php
+
+		-
+			message: '#^Function esc_html not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: includes/elementor/widgets/widget-media.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 31
+			path: includes/elementor/widgets/widget-media.php
+
+		-
+			message: '#^Function esc_url not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: includes/elementor/widgets/widget-media.php
+
+		-
+			message: '#^Call to method have_posts\(\) on an unknown class WP_Query\.$#'
+			identifier: class.notFound
+			count: 2
+			path: includes/elementor/widgets/widget-services.php
+
+		-
+			message: '#^Call to method the_post\(\) on an unknown class WP_Query\.$#'
+			identifier: class.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-services.php
+
+		-
+			message: '#^Function esc_html not found\.$#'
+			identifier: function.notFound
+			count: 13
+			path: includes/elementor/widgets/widget-services.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 55
+			path: includes/elementor/widgets/widget-services.php
+
+		-
+			message: '#^Function esc_html_e not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-services.php
+
+		-
+			message: '#^Function esc_url not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/elementor/widgets/widget-services.php
+
+		-
+			message: '#^Function get_the_title not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-services.php
+
+		-
+			message: '#^Function the_permalink not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-services.php
+
+		-
+			message: '#^Function wp_reset_postdata not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-services.php
+
+		-
+			message: '#^Instantiated class WP_Query not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-services.php
+
+		-
+			message: '#^Function esc_attr not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/elementor/widgets/widget-social.php
+
+		-
+			message: '#^Function esc_html not found\.$#'
+			identifier: function.notFound
+			count: 17
+			path: includes/elementor/widgets/widget-social.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 60
+			path: includes/elementor/widgets/widget-social.php
+
+		-
+			message: '#^Function esc_url not found\.$#'
+			identifier: function.notFound
+			count: 6
+			path: includes/elementor/widgets/widget-social.php
+
+		-
+			message: '#^Function esc_attr not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: includes/elementor/widgets/widget-ui.php
+
+		-
+			message: '#^Function esc_html not found\.$#'
+			identifier: function.notFound
+			count: 7
+			path: includes/elementor/widgets/widget-ui.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 65
+			path: includes/elementor/widgets/widget-ui.php
+
+		-
+			message: '#^Function esc_url not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/elementor/widgets/widget-ui.php
+
+		-
+			message: '#^Function wp_kses_post not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/elementor/widgets/widget-ui.php
+
+		-
+			message: '#^Function wpautop not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/elementor/widgets/widget-ui.php
+
+		-
+			message: '#^Function add_action not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/frontend.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: includes/frontend.php
+
+		-
+			message: '#^Function get_option not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/frontend.php
+
+		-
+			message: '#^Function register_rest_route not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/frontend.php
+
+		-
+			message: '#^Function wp_insert_post not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/frontend.php
+
+		-
+			message: '#^Function wp_mail not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/frontend.php
+
+		-
+			message: '#^Instantiated class WP_Error not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: includes/frontend.php
+
+		-
+			message: '#^Instantiated class WP_REST_Response not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: includes/frontend.php
+
+		-
+			message: '#^Constant MINUTE_IN_SECONDS not found\.$#'
+			identifier: constant.notFound
+			count: 2
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function add_action not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function delete_transient not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 11
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function get_bloginfo not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function get_option not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function get_transient not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function get_user_by not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function is_wp_error not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function register_rest_route not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function sanitize_key not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function set_transient not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function wp_generate_password not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function wp_insert_user not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function wp_json_encode not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function wp_rand not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function wp_remote_post not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function wp_remote_retrieve_body not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function wp_set_auth_cookie not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/otp-login.php
+
+		-
+			message: '#^Instantiated class WP_Error not found\.$#'
+			identifier: class.notFound
+			count: 7
+			path: includes/otp-login.php
+
+		-
+			message: '#^Instantiated class WP_REST_Response not found\.$#'
+			identifier: class.notFound
+			count: 3
+			path: includes/otp-login.php
+
+		-
+			message: '#^Function add_action not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/post-types.php
+
+		-
+			message: '#^Function add_filter not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/post-types.php
+
+		-
+			message: '#^Function esc_attr not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/post-types.php
+
+		-
+			message: '#^Function esc_html not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: includes/post-types.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 21
+			path: includes/post-types.php
+
+		-
+			message: '#^Function get_post_meta not found\.$#'
+			identifier: function.notFound
+			count: 4
+			path: includes/post-types.php
+
+		-
+			message: '#^Function register_post_type not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/post-types.php
+
+		-
+			message: '#^Access to property \$found_posts on an unknown class WP_Query\.$#'
+			identifier: class.notFound
+			count: 1
+			path: includes/rest-api.php
+
+		-
+			message: '#^Access to property \$max_num_pages on an unknown class WP_Query\.$#'
+			identifier: class.notFound
+			count: 1
+			path: includes/rest-api.php
+
+		-
+			message: '#^Access to property \$posts on an unknown class WP_Query\.$#'
+			identifier: class.notFound
+			count: 1
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function add_action not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function current_user_can not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function esc_html__ not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function get_post not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function get_post_meta not found\.$#'
+			identifier: function.notFound
+			count: 10
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function get_the_date not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function get_the_title not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function number_format_i18n not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function register_rest_route not found\.$#'
+			identifier: function.notFound
+			count: 5
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function update_post_meta not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function wp_count_posts not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function wp_delete_post not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: includes/rest-api.php
+
+		-
+			message: '#^Instantiated class WP_Error not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: includes/rest-api.php
+
+		-
+			message: '#^Instantiated class WP_Query not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: includes/rest-api.php
+
+		-
+			message: '#^Instantiated class WP_REST_Response not found\.$#'
+			identifier: class.notFound
+			count: 5
+			path: includes/rest-api.php
+
+		-
+			message: '#^Function add_action not found\.$#'
+			identifier: function.notFound
+			count: 3
+			path: rozholy-companion.php
+
+		-
+			message: '#^Function flush_rewrite_rules not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: rozholy-companion.php
+
+		-
+			message: '#^Function get_option not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: rozholy-companion.php
+
+		-
+			message: '#^Function load_plugin_textdomain not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: rozholy-companion.php
+
+		-
+			message: '#^Function plugin_basename not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: rozholy-companion.php
+
+		-
+			message: '#^Function plugin_dir_path not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: rozholy-companion.php
+
+		-
+			message: '#^Function plugin_dir_url not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: rozholy-companion.php
+
+		-
+			message: '#^Function register_activation_hook not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: rozholy-companion.php
+
+		-
+			message: '#^Function register_deactivation_hook not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: rozholy-companion.php
+
+		-
+			message: '#^Function update_option not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: rozholy-companion.php
+
+		-
+			message: '#^Function wp_clear_scheduled_hook not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: rozholy-companion.php
+
+		-
+			message: '#^Function delete_option not found\.$#'
+			identifier: function.notFound
+			count: 2
+			path: uninstall.php
+
+		-
+			message: '#^Function get_option not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: uninstall.php
+
+		-
+			message: '#^Function get_posts not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: uninstall.php
+
+		-
+			message: '#^Function wp_clear_scheduled_hook not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: uninstall.php
+
+		-
+			message: '#^Function wp_delete_post not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: uninstall.php
