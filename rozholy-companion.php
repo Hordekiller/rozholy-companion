@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Rozholy Companion
  * Plugin URI:        https://github.com/Hordekiller/rozholy-companion
- * Description:       همراه هوشمند برای قالب Rozholy - مدیریت رزروها و بلاک‌های سفارشی با استایل WPDS
+ * Description:       Companion plugin for Rozholy theme — booking management with React admin UI and custom Gutenberg blocks styled with WPDS
  * Version:           1.0.0
  * Requires at least: 6.5
  * Requires PHP:      7.4

@@ -1,54 +1,62 @@
 # Rozholy Companion
 
-همراه هوشمند قالب Rozholy — مدیریت رزروها و بلاک‌های سفارشی با استایل WordPress Design System (WPDS)
+A companion plugin for the Rozholy WordPress theme — booking management system with React admin UI and custom Gutenberg blocks styled with WordPress Design System (WPDS).
 
-## ویژگی‌ها
+---
 
-### 📋 مدیریت رزروها
-- پست تایپ اختصاصی `rz_booking` برای ذخیره رزروها
-- REST API کامل برای مدیریت رزروها
-- صفحه ادمین React با `@wordpress/components` برای مدیریت آسان
-- تغییر وضعیت رزرو (در انتظار، تایید شده، انجام شده، لغو شده)
-- جستجو و فیلتر پیشرفته
-- جزئیات کامل هر رزرو
+## Features
 
-### 🧩 بلاک‌های سفارشی
-- **Service Card**: کارت نمایش خدمات با آیکون، عنوان، توضیحات و قیمت
-- **Testimonial**: کارت نظرات مشتریان با امتیاز و تصویر
+### Booking Management
+- Custom `rz_booking` post type for storing appointments
+- Full REST API for booking CRUD operations
+- React admin page built with `@wordpress/components`
+- Status management: pending, confirmed, completed, cancelled
+- Advanced search and filtering
+- Detailed booking view with modal
 
-### 🎨 استایل WPDS
-- استفاده از کامپوننت‌های استاندارد `@wordpress/components`
-- پالت رنگی هماهنگ با قالب Rozholy
-- انطباق با اصول طراحی WordPress Design System
+### Custom Blocks
+- **Service Card** — display services with icon, title, description, and price
+- **Testimonial** — customer testimonial cards with rating and avatar
 
-## نصب
+### WPDS Styling
+- Uses standard `@wordpress/components` for admin UI
+- Color palette aligned with the Rozholy theme
+- Follows WordPress Design System principles
 
-1. پوشه `rozholy-companion` را به `/wp-content/plugins/` کپی کنید
-2. از پیشخوان وردپرس > افزونه‌ها، افزونه را فعال کنید
-3. منوی "Rozholy" در پیشخوان وردپرس ظاهر می‌شود
+---
 
-## توسعه
+## Installation
+
+1. Copy the `rozholy-companion` folder to `/wp-content/plugins/`
+2. Activate from **Plugins** in the WordPress admin
+3. A "Rozholy" menu item appears in the admin sidebar
+
+---
+
+## Development
 
 ```bash
 npm install
-npm run build    # build for production
-npm run start    # watch mode
+npm run build     # Production build
+npm run start     # Watch mode with hot reload
 ```
 
-## ساختار فایل‌ها
+---
+
+## File Structure
 
 ```
 rozholy-companion/
 ├── rozholy-companion.php       # Main plugin file
 ├── includes/
-│   ├── post-types.php          # CPT + admin columns
-│   ├── admin-page.php          # Admin page + assets
+│   ├── post-types.php          # CPT registration + admin columns
+│   ├── admin-page.php          # Admin page + asset enqueue
 │   ├── rest-api.php            # REST API endpoints
-│   ├── blocks.php              # Block registration + render
+│   ├── blocks.php              # Block registration + render callbacks
 │   └── frontend.php            # Public booking form handler
 ├── src/
 │   ├── admin/
-│   │   ├── index.js            # React admin app
+│   │   ├── index.js            # React admin application
 │   │   └── style.scss          # Admin styles
 │   └── blocks/
 │       ├── service-card/
@@ -57,21 +65,25 @@ rozholy-companion/
 │       └── testimonial/
 │           ├── block.json
 │           └── index.js
-├── build/                      # Built assets
+├── build/                      # Compiled assets
 └── package.json
 ```
 
-## API endpoints
+---
+
+## REST API Endpoints
 
 | Method | Route | Description |
 |--------|-------|-------------|
-| GET | `/wp-json/rozholy-companion/v1/bookings` | List bookings |
-| GET | `/wp-json/rozholy-companion/v1/bookings/:id` | Get booking |
-| PUT | `/wp-json/rozholy-companion/v1/bookings/:id/status` | Update status |
+| GET | `/wp-json/rozholy-companion/v1/bookings` | List all bookings |
+| GET | `/wp-json/rozholy-companion/v1/bookings/:id` | Get single booking |
+| PUT | `/wp-json/rozholy-companion/v1/bookings/:id/status` | Update booking status |
 | DELETE | `/wp-json/rozholy-companion/v1/bookings/:id` | Delete booking |
-| POST | `/wp-json/rozholy-companion/v1/submit-booking` | Public booking form |
-| GET | `/wp-json/rozholy-companion/v1/stats` | Get stats |
+| POST | `/wp-json/rozholy-companion/v1/submit-booking` | Submit a new booking |
+| GET | `/wp-json/rozholy-companion/v1/stats` | Get booking statistics |
+
+---
 
 ## License
 
-GNU General Public License v2.0 or later
+GNU General Public License v2.0 or later.
