@@ -113,9 +113,10 @@ class Rozholy_Widget_Service_Card extends \Elementor\Widget_Base {
 			<div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#d4a0a0,#b8a0c0);"></div>
 			<div style="width:64px;height:64px;margin:0 auto 18px;background:linear-gradient(135deg,#f0d0d0,#f5ece4);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;">
 				<?php
-				if ( $s['icon']['value'] ) :
+				$sc_icon = is_string( $s['icon'] ) ? array( 'value' => $s['icon'], 'library' => 'fa-solid' ) : ( $s['icon'] ?? array() );
+				if ( ! empty( $sc_icon['value'] ) ) :
 					\Elementor\Icons_Manager::render_icon(
-						$s['icon'],
+						$sc_icon,
 						array(
 							'class'       => 'rz-svc-icon',
 							'aria-hidden' => 'true',
@@ -257,9 +258,10 @@ class Rozholy_Widget_Services_Grid extends \Elementor\Widget_Base {
 			<?php foreach ( $services as $svc ) : ?>
 				<div class="rz-service-card" style="background:#fff;border:1px solid #e8ddd5;border-radius:16px;padding:30px 20px;text-align:center;">
 					<?php
-					if ( $svc['icon']['value'] ) :
+					$svc_icon = is_string( $svc['icon'] ) ? array( 'value' => $svc['icon'], 'library' => 'fa-solid' ) : ( $svc['icon'] ?? array() );
+					if ( ! empty( $svc_icon['value'] ) ) :
 						?>
-						<div style="font-size:2rem;margin-bottom:12px;"><?php \Elementor\Icons_Manager::render_icon( $svc['icon'], array( 'aria-hidden' => 'true' ) ); ?></div><?php endif; ?>
+						<div style="font-size:2rem;margin-bottom:12px;"><?php \Elementor\Icons_Manager::render_icon( $svc_icon, array( 'aria-hidden' => 'true' ) ); ?></div><?php endif; ?>
 					<?php
 					if ( $svc['title'] ) :
 						?>
@@ -408,7 +410,8 @@ class Rozholy_Widget_Pricing_Table extends \Elementor\Widget_Base {
 						?>
 						<ul style="list-style:none;padding:0;margin:0 0 24px;text-align:center;">
 						<?php
-						foreach ( explode( "\n", $plan['features'] ) as $fitem ) :
+						$features_str = is_array( $plan['features'] ) ? implode( "\n", $plan['features'] ) : (string) $plan['features'];
+						foreach ( explode( "\n", $features_str ) as $fitem ) :
 							?>
 	<li style="padding:6px 0;border-bottom:1px solid #f5ece4;"><?php echo esc_html( trim( $fitem ) ); ?></li><?php endforeach; ?></ul><?php endif; ?>
 					<?php

@@ -177,8 +177,9 @@ class Rozholy_Widget_Stats_Counter extends \Elementor\Widget_Base {
 			<div style="display:grid;grid-template-columns:repeat(<?php echo intval( $cols ); ?>,1fr);gap:30px;max-width:1100px;margin:0 auto;">
 				<?php foreach ( $items as $item ) : ?>
 					<div style="padding:10px;">
-						<?php if ( $item['icon']['value'] ) : ?>
-							<div style="font-size:2rem;margin-bottom:10px;color:#d4a0a0;"><?php \Elementor\Icons_Manager::render_icon( $item['icon'], array( 'aria-hidden' => 'true' ) ); ?></div>
+						<?php $st_icon = is_string( $item['icon'] ) ? array( 'value' => $item['icon'], 'library' => 'fa-solid' ) : ( $item['icon'] ?? array() ); ?>
+						<?php if ( ! empty( $st_icon['value'] ) ) : ?>
+							<div style="font-size:2rem;margin-bottom:10px;color:#d4a0a0;"><?php \Elementor\Icons_Manager::render_icon( $st_icon, array( 'aria-hidden' => 'true' ) ); ?></div>
 						<?php endif; ?>
 						<div class="rz-stat-number" style="font-size:clamp(2rem,4vw,3.5rem);font-weight:700;line-height:1.2;margin-bottom:4px;direction:ltr;">
 							<?php echo esc_html( $item['prefix'] ?? '' ); ?><span class="rz-counter" data-target="<?php echo intval( $item['number'] ); ?>">0</span><?php echo esc_html( $item['suffix'] ?? '' ); ?>
@@ -482,7 +483,6 @@ class Rozholy_Widget_Cta_Banner extends \Elementor\Widget_Base {
 				'selector'       => '.elementor {{WRAPPER}} .rz-cta-banner',
 				'fields_options' => array(
 					'background'     => array( 'default' => 'gradient' ),
-					'gradient_angle' => array( 'default' => '135' ),
 					'color_a'        => array( 'default' => '#d4a0a0' ),
 					'color_b'        => array( 'default' => '#b8a0c0' ),
 				),

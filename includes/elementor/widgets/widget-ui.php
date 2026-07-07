@@ -323,9 +323,10 @@ class Rozholy_Widget_Highlight_Box extends \Elementor\Widget_Base {
 		?>
 		<div style="padding:16px 20px;border-radius:12px;background:<?php echo esc_attr( $v['bg'] ); ?>;border:1px solid <?php echo esc_attr( $v['border'] ); ?>;color:<?php echo esc_attr( $v['color'] ); ?>;display:flex;gap:12px;align-items:flex-start;">
 			<?php
-			if ( $s['icon']['value'] ) :
+			$hi_icon = is_string( $s['icon'] ) ? array( 'value' => $s['icon'], 'library' => 'fa-solid' ) : ( $s['icon'] ?? array() );
+			if ( ! empty( $hi_icon['value'] ) ) :
 				?>
-				<span style="font-size:1.5rem;flex-shrink:0;"><?php \Elementor\Icons_Manager::render_icon( $s['icon'], array( 'aria-hidden' => 'true' ) ); ?></span><?php endif; ?>
+				<span style="font-size:1.5rem;flex-shrink:0;"><?php \Elementor\Icons_Manager::render_icon( $hi_icon, array( 'aria-hidden' => 'true' ) ); ?></span><?php endif; ?>
 			<div><?php echo wp_kses_post( wpautop( $s['content'] ) ); ?></div>
 		</div>
 		<?php
@@ -499,9 +500,10 @@ class Rozholy_Widget_Empty_State extends \Elementor\Widget_Base {
 		?>
 		<div style="text-align:center;padding:60px 20px;background:#f9f6f3;border:2px dashed #e8ddd5;border-radius:20px;">
 			<?php
-			if ( $s['icon']['value'] ) :
+			$so_icon = is_string( $s['icon'] ) ? array( 'value' => $s['icon'], 'library' => 'fa-solid' ) : ( $s['icon'] ?? array() );
+			if ( ! empty( $so_icon['value'] ) ) :
 				?>
-				<div style="font-size:3rem;margin-bottom:12px;"><?php \Elementor\Icons_Manager::render_icon( $s['icon'], array( 'aria-hidden' => 'true' ) ); ?></div><?php endif; ?>
+				<div style="font-size:3rem;margin-bottom:12px;"><?php \Elementor\Icons_Manager::render_icon( $so_icon, array( 'aria-hidden' => 'true' ) ); ?></div><?php endif; ?>
 			<?php
 			if ( $s['title'] ) :
 				?>
