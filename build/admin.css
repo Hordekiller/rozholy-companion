@@ -1,0 +1,36 @@
+.rz-admin-wrap {
+  margin: 20px 0;
+}
+.rz-admin-wrap .components-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.rz-admin-wrap .components-tab-panel__tabs {
+  border-bottom: 1px solid #e2e4e7;
+  margin-bottom: 0;
+}
+.rz-admin-wrap .components-tab-panel__tab {
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #50575e;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.rz-admin-wrap .components-tab-panel__tab.is-active {
+  color: #d4a0a0;
+  border-bottom-color: #d4a0a0;
+}
+.rz-admin-wrap .components-tab-panel__tab:hover:not(.is-active) {
+  color: #1e1e1e;
+}
+.rz-admin-wrap .components-search-control__input {
+  border-radius: 4px;
+  border: 1px solid #e2e4e7;
+}
+.rz-admin-wrap .components-search-control__input:focus {
+  border-color: #d4a0a0;
+  box-shadow: 0 0 0 1px #d4a0a0;
+}
+
+/*# sourceMappingURL=admin.css.map */

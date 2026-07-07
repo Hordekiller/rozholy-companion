@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "rozholy-companion/testimonial",
+  "title": "Testimonial",
+  "category": "rozholy",
+  "icon": "testimonial",
+  "description": "کارت نمایش نظرات مشتریان با استایل WPDS",
+  "keywords": ["testimonial", "review", "customer", "feedback"],
+  "version": "1.0.0",
+  "textdomain": "rozholy-companion",
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": ""
+    },
+    "content": {
+      "type": "string",
+      "default": ""
+    },
+    "rating": {
+      "type": "number",
+      "default": 5
+    },
+    "role": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": true,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:../../../includes/blocks.php"
+}
