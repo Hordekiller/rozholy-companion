@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Rozholy Companion
  * Plugin URI:        https://github.com/Hordekiller/rozholy-companion
- * Description:       Companion plugin for Rozholy theme — booking management with React admin UI and custom Gutenberg blocks styled with WPDS
+ * Description:       Companion plugin for Rozholy theme — booking management with React admin UI and custom Elementor widgets for beauty salons
  * Version:           1.0.0
  * Requires at least: 6.5
  * Requires PHP:      7.4
@@ -14,17 +14,42 @@
  * Domain Path:       /languages
  */
 
-define('ROZHOLY_COMPANION_VERSION', '1.0.0');
-define('ROZHOLY_COMPANION_DIR', plugin_dir_path(__FILE__));
-define('ROZHOLY_COMPANION_URI', plugin_dir_url(__FILE__));
+define( 'ROZHOLY_COMPANION_VERSION', '1.0.0' );
+define( 'ROZHOLY_COMPANION_DB_VERSION', '1' );
+define( 'ROZHOLY_COMPANION_DIR', plugin_dir_path( __FILE__ ) );
+define( 'ROZHOLY_COMPANION_URI', plugin_dir_url( __FILE__ ) );
 
 require_once ROZHOLY_COMPANION_DIR . 'includes/post-types.php';
 require_once ROZHOLY_COMPANION_DIR . 'includes/admin-page.php';
 require_once ROZHOLY_COMPANION_DIR . 'includes/rest-api.php';
 require_once ROZHOLY_COMPANION_DIR . 'includes/blocks.php';
+require_once ROZHOLY_COMPANION_DIR . 'includes/elementor/init.php';
 require_once ROZHOLY_COMPANION_DIR . 'includes/frontend.php';
+require_once ROZHOLY_COMPANION_DIR . 'includes/otp-login.php';
+require_once ROZHOLY_COMPANION_DIR . 'includes/class-abilities-registrar.php';
 
-add_action('init', 'rozholy_companion_init');
+add_action( 'wp_abilities_api_categories_init', array( 'Rozholy_Companion_Abilities_Registrar', 'register_category' ) );
+add_action( 'wp_abilities_api_init', array( 'Rozholy_Companion_Abilities_Registrar', 'register_abilities' ) );
+
+register_activation_hook( __FILE__, 'rozholy_companion_activate' );
+function rozholy_companion_activate(): void {
+	update_option( 'rozholy_companion_db_version', ROZHOLY_COMPANION_DB_VERSION );
+	rozholy_companion_register_post_types();
+	flush_rewrite_rules();
+}
+
+register_deactivation_hook( __FILE__, 'rozholy_companion_deactivate' );
+function rozholy_companion_deactivate(): void {
+	wp_clear_scheduled_hook( 'rozholy_companion_daily_cleanup' );
+	flush_rewrite_rules();
+}
+
+add_action( 'init', 'rozholy_companion_init' );
 function rozholy_companion_init() {
-    load_plugin_textdomain('rozholy-companion', false, dirname(plugin_basename(__FILE__)) . '/languages');
+	load_plugin_textdomain( 'rozholy-companion', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
+	$saved_version = (int) get_option( 'rozholy_companion_db_version', 0 );
+	if ( $saved_version < (int) ROZHOLY_COMPANION_DB_VERSION ) {
+		update_option( 'rozholy_companion_db_version', ROZHOLY_COMPANION_DB_VERSION );
+	}
 }
