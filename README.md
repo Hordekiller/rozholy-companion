@@ -84,6 +84,12 @@ rozholy-companion/
 
 ---
 
+## Author
+
+**Hordekiller** — [github.com/Hordekiller](https://github.com/Hordekiller)
+
+---
+
 ## License
 
 GNU General Public License v2.0 or later.
